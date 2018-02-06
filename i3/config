@@ -221,9 +221,14 @@ assign [class="Termite"] $workspace1
 assign [class="Thunderbird"] $workspace9
 for_window [class="Spotify"] move to workspace $workspace10
 
+# Set volume to 20% at startup:
+exec --no-startup-id pactl set-sink-volume 0 20%
+
 #Wallpaper:
 exec_always feh --bg-scale ~/Pictures/Wallpapers/polygon-wallpaper-25.jpg
 
 #Fade effect:
-
 exec --no-startup-id xcompmgr -f
+
+#Turn off bell sound:
+exec --no-startup-id xset -b
